@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* 站点皮肤:食物暖橙/奶油基调(与 WageStats 石板蓝、AnswerToday 品牌绿区分——站群换皮纪律) */
+:root {
+  --background: #fdfaf5;
+  --foreground: #292018;
+  --brand: #c2571b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-ink: var(--foreground);
+  --color-brand: var(--brand);
+  --font-sans: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
