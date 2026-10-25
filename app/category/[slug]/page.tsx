@@ -5,6 +5,7 @@ import AdSlot from '@/components/AdSlot'
 import { breadcrumbLd } from '@/lib/jsonld'
 import { BASE } from '@/lib/site'
 import { allCategories, categoryName, foodsInCategory } from '@/lib/fdc'
+import FilterBox from '@/components/FilterBox'
 
 /** 类目页:"vegetable calorie chart" / "fruits with protein" 意图。 */
 export const revalidate = 86400
@@ -62,8 +63,9 @@ export default async function CategoryPage({
 
       <AdSlot slot="category-top" />
 
-      <div className="mt-6 overflow-x-auto rounded-xl border border-ink/10 bg-white">
-        <table className="w-full text-[13.5px]">
+      <FilterBox targetId="cat-table" placeholder="Filter foods…" />
+      <div id="cat-table" className="mt-6 overflow-x-auto rounded-xl border border-ink/10 bg-white">
+        <table className="w-full text-[13.5px] sticky-head">
           <thead>
             <tr className="border-b border-ink/10 text-left text-[12px] uppercase tracking-wider text-ink/45">
               <th className="px-4 py-2.5">Food</th>
